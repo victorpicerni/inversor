@@ -9,6 +9,7 @@
 
 
 const int tam_buffer=100;
+int tam;
 
 /*funcao para inverter as palavras a partir de um espaco*/
 void inverte(char *buffer, int *k, int *j){
@@ -21,12 +22,13 @@ void inverte(char *buffer, int *k, int *j){
 
 /*funcao para encontrar, separar e inverter as palavras*/
 void palavra(char *buffer){
-	if (buffer[tam] == '\n') buffer[tam] = '\0';
+
 	/*substituicao da quebra de linha por um fim de linha*/
 	
 	int k=0, j=0;
 	int tam = strlen(buffer) - 1;
-	/*contagem de caracteres*/ 	
+	/*contagem de caracteres*/ 
+	if (buffer[tam] == '\n') buffer[tam] = '\0';
 	int i;
 	for (i=0; i < tam ;i++){
 		
